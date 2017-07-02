@@ -3,15 +3,15 @@ import { StackNavigator } from "react-navigation";
 import { Root } from "native-base";
 
 import Login from "./screens/Login";
-import Home from "./screens/Home";
+import Drawer from "./Drawer";
 
 const AppNavigator = StackNavigator(
   {
     Login: { screen: Login },
-    Home: { screen: Home }
+    Drawer: { screen: Drawer }
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Login",
     headerMode: "none"
   }
 );

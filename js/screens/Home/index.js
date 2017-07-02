@@ -26,7 +26,10 @@ export default class Home extends Component {
       <Container>
         <Header>
           <Left>
-            <Button transparent>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}
+            >
               <Icon name="menu" />
             </Button>
           </Left>
@@ -43,7 +46,7 @@ export default class Home extends Component {
           <Card>
             <CardItem>
               <Body>
-                <H3 style={styles.h3}>Hey there! </H3>
+                <H3 style={styles.h3}>Hey there!</H3>
                 <Text style={styles.text}>
                   This is the NativeBase boilerplate. We've added a few example
                   screens to help you get started. Click on the menu button to

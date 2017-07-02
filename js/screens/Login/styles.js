@@ -1,13 +1,9 @@
 const styles = {
   container: {
-    justifyContent: "space-around",
     backgroundColor: "#fff"
   },
   logo: {
-    height: 220,
-    width: 220,
-    alignSelf: "center",
-    top: 30
+    alignSelf: "center"
   },
   form: {
     paddingRight: 45,
