@@ -3,12 +3,13 @@ import { StackNavigator } from "react-navigation";
 import { Root } from "native-base";
 
 import Login from "./screens/Login";
+import Home from "./screens/Home";
 import Drawer from "./Drawer";
 
 const AppNavigator = StackNavigator(
   {
     Login: { screen: Login },
-    Drawer: { screen: Drawer }
+    Home: { screen: Home }
   },
   {
     initialRouteName: "Login",
