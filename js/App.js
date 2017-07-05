@@ -6,6 +6,8 @@ import SideBar from "./components/Sidebar";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import Drawer from "./Drawer";
+import List from "./screens/List";
+import Card from "./screens/Card";
 
 const AppNavigator = DrawerNavigator(
   {

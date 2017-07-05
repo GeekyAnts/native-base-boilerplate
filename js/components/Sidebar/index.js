@@ -35,7 +35,6 @@ const datas = [
 ];
 export default class Sidebar extends Component {
   render() {
-    console.log(this.props.navigation);
     return (
       <Container>
         <Content bounces={false}>
