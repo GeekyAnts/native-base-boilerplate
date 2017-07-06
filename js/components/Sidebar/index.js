@@ -13,6 +13,7 @@ import {
   Right,
   Badge
 } from "native-base";
+import { NavigationActions } from 'react-navigation';
 
 import styles from "./styles";
 
@@ -33,8 +34,20 @@ const datas = [
     icon: "log-out"
   }
 ];
+const resetAction = NavigationActions.reset({
+  index: 0,
+  actions: [
+    NavigationActions.navigate({ routeName: 'Login'}),
+  ]
+})
 export default class Sidebar extends Component {
+  pushPage(route) {
+    const rootNavigation = this.props.screenProps.rootNavigation;
+    rootNavigation.navigate(route);
+    this.props.navigation.navigate("DrawerClose");
+  }
   render() {
+    const rootNavigation = this.props.screenProps.rootNavigation;
     return (
       <Container>
         <Content bounces={false}>
@@ -47,7 +60,7 @@ export default class Sidebar extends Component {
               button
               key={i}
               noBorder
-              onPress={() => this.props.navigation.navigate(data.route)}
+              onPress={() => (data.route === 'Login') ? rootNavigation.dispatch(resetAction) : this.pushPage(data.route)}
             >
               <Left>
                 <Icon

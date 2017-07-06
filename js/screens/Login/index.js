@@ -82,7 +82,7 @@ export default class Login extends Component {
         type: "danger",
         duration: 2500
       });
-    } else this.props.navigation.navigate("Home");
+    } else this.props.navigation.navigate("Drawer");
   }
   render() {
     return (

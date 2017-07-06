@@ -1,5 +1,5 @@
 import React from "react";
-import { DrawerNavigator } from "react-navigation";
+import { StackNavigator } from "react-navigation";
 import { Root } from "native-base";
 
 import SideBar from "./components/Sidebar";
@@ -8,19 +8,20 @@ import Home from "./screens/Home";
 import Drawer from "./Drawer";
 import List from "./screens/List";
 import Card from "./screens/Card";
-
-const AppNavigator = DrawerNavigator(
+Drawer.navigationOptions = ({ navigation }) => ({
+  header: null
+});
+const AppNavigator = StackNavigator(
   {
     Login: { screen: Login },
-    Home: { screen: Home },
-    Drawer: { screen: Drawer }
+    List: { screen: List },
+    Card: { screen: Card },
+    Drawer: { screen: ({navigation}) => <Drawer screenProps={{rootNavigation: navigation}} /> }
   },
   {
+    index: 0,
     initialRouteName: "Login",
-    contentOptions: {
-      activeTintColor: "#e91e63"
-    },
-    contentComponent: props => <SideBar {...props} />
+    headerMode: "none"
   }
 );
 
