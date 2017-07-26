@@ -1,5 +1,10 @@
 {
-  "expo": {
-    "sdkVersion": "19.0.0"
-  }
+	"expo": {
+		"sdkVersion": "19.0.0",
+		"androidStatusBarColor": "#3F51B5",
+		"androidStatusBar": {
+			"barStyle": "light-content",
+			"backgroundColor": "#3F51B5"
+		}
+	}
 }
