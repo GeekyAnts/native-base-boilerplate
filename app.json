@@ -1,4 +1,5 @@
 {
-  "name": "NativeBaseBoilerplate",
-  "displayName": "NativeBaseBoilerplate"
+  "expo": {
+    "sdkVersion": "19.0.0"
+  }
 }
